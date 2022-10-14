@@ -20,6 +20,8 @@ public class appDriver {
 		list.addToEnd(7);
 		list.addToStart(3);
 		list.addToStart(2);
+		
+		list.addAt(2, 5);
 		list.print();
 	}
 

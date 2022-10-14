@@ -33,8 +33,28 @@ public void addToStart(T data) {
  * @param data
  */
 public void addAt(int index,T data) {
-	
+	Node1<T> nodeToAdd = new Node1<T>(data);
+	if(isEmpty()) {
+		addToStart(data);
+	}
+	else if(size()<= index) {
+		addToEnd(data);
+	}
+	else {
+		Node1<T> current = start;
+		for(int counter = 0; counter < index - 1; counter++) {
+			current = current.getNext();
+		}
+		current.getNext().setPrevious(nodeToAdd);
+		nodeToAdd.setNext(current.getNext());
+		current.setNext(nodeToAdd);
+		nodeToAdd.setPrevious(current);
+	}
 }
+
+//1     2      3      4     5
+//length: 5
+//index: 6
 
 /**
  * adds node to end of the list, if the list is empty addToStart is called.
@@ -53,6 +73,18 @@ public void addToEnd(T data) {
 		nodeToAdd.setPrevious(current);
 		
 	}
+}
+
+public int size() {
+	Node1<T> current = start;
+	int counter = 0;
+	
+	while(current != null) {
+		counter++;
+		current = current.getNext();
+	}
+	
+	return counter;
 }
 
 /**
