@@ -75,6 +75,28 @@ public void addToEnd(T data) {
 	}
 }
 
+public T removeFromStart() {
+	T object = null;
+	
+	if(!isEmpty()) {
+		if(start.getNext() == null) {
+			object = start.getData();
+			start = null;
+		}
+		else {
+			object = start.getData();
+			start = start.getNext();
+			start.setPrevious(null);
+		}
+	}
+	
+	return object;
+}
+
+public void removeFromEnd() {
+	
+}
+
 public int size() {
 	Node1<T> current = start;
 	int counter = 0;

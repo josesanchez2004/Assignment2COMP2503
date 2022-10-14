@@ -22,6 +22,8 @@ public class appDriver {
 		list.addToStart(2);
 		
 		list.addAt(2, 5);
+		list.removeFromStart();
+		list.removeFromStart();
 		list.print();
 	}
 
