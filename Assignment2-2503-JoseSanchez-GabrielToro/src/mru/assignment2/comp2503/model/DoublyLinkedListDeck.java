@@ -52,9 +52,6 @@ public void addAt(int index,T data) {
 	}
 }
 
-//1     2      3      4     5
-//length: 5
-//index: 6
 
 /**
  * adds node to end of the list, if the list is empty addToStart is called.
@@ -74,7 +71,10 @@ public void addToEnd(T data) {
 		
 	}
 }
-
+/**
+ * removes item from the start of the list and returns the value. 
+ * @return object
+ */
 public T removeFromStart() {
 	T object = null;
 	
@@ -97,6 +97,10 @@ public void removeFromEnd() {
 	
 }
 
+/**
+ * this method counts the length of the linked list.
+ * @return counter
+ */
 public int size() {
 	Node1<T> current = start;
 	int counter = 0;
