@@ -93,9 +93,6 @@ public T removeFromStart() {
 	return object;
 }
 
-public void removeFromEnd() {
-	
-}
 
 /**
  * this method counts the length of the linked list.

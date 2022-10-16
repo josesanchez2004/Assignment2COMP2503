@@ -11,17 +11,20 @@ public class TextMessage {
 	public void deckHasBeenShuffled() {
 		System.out.println(" ");
 		System.out.println(" Deck has been shuffled! ");
-		System.out.println(" ");
 	}
 	
-	public int mainMenuText() {
+	public void mainMenuText() {
+		System.out.println(" ");
 		System.out.println("Welcome to Jose and Gabes game!!");
 		System.out.println("	(1) Play Game  "); 
 		System.out.println("	(2) Shuffle Cards ");
 		System.out.println("    	(3) Exit  ");
+	}
+	
+	public int promptMenuChoice() {
 		System.out.print("Please select your choice:  ");
-		int choice= sc.nextInt();
-		return choice;
+		 int choice= sc.nextInt();
+		 return choice;
 	}
 
 }

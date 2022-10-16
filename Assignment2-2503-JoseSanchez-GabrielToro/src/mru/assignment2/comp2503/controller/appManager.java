@@ -8,29 +8,38 @@ public class appManager {
 
 	Scanner in;
 	TextMessage message;
+	CardDeck deck;
+	
 	public appManager() {
+		
 		in = new Scanner(System.in);
 		message=new TextMessage();
 		mainMenu();
 	}
 	
 	private void mainMenu() {
-		boolean exit = false;
-	
+		boolean toggle = true;
+		int choice=0;
 		
-		while(exit) {
-			switch (2) {
-			case 1: {
+		while(toggle) {
+			message.mainMenuText();
+			choice= message.promptMenuChoice();
+			
+			switch (choice) {
+			case 1: 
 				
-			}
-			case 2:{
-				
-			}
-			case 3: {
-				exit=true;
-			}
-			default:
-				throw new IllegalArgumentException("Unexpected value: " );
+				break;
+			
+			case 2:
+				deck.shuffleDeck();
+				message.deckHasBeenShuffled();
+				break;
+			
+			case 3: 
+				toggle=false;
+				break;
+			
+			
 			}
 		}
 		
