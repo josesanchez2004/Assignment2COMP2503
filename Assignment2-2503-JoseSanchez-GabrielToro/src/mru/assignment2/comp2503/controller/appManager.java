@@ -14,6 +14,7 @@ public class appManager {
 		
 		in = new Scanner(System.in);
 		message=new TextMessage();
+		deck= new CardDeck();
 		mainMenu();
 	}
 	
@@ -27,7 +28,7 @@ public class appManager {
 			
 			switch (choice) {
 			case 1: 
-				
+				deck.list.print();
 				break;
 			
 			case 2:

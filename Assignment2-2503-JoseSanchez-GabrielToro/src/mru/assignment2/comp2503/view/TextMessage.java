@@ -26,5 +26,12 @@ public class TextMessage {
 		 int choice= sc.nextInt();
 		 return choice;
 	}
+	
+	public int howManyCards() {
+		System.out.print("How many cards would you like to deal: ");
+		int cards= sc.nextInt();
+		return cards;
+	}
+	
 
 }

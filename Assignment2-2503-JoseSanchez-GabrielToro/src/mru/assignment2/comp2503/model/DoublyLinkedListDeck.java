@@ -93,6 +93,24 @@ public T removeFromStart() {
 	return object;
 }
 
+public T removeFromEnd() {
+	T object = null;
+	Node1<T>curr= start; 
+	if(curr==null || curr.getNext()==null) {
+		removeFromStart();
+	}
+	while(curr.getNext()!=null) {
+		curr=curr.getNext();
+	}
+	
+	object=curr.getData();
+	curr.getPrevious().setNext(null);
+	
+	
+	return object;
+	
+}
+
 
 /**
  * this method counts the length of the linked list.
