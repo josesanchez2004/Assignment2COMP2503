@@ -92,7 +92,10 @@ public T removeFromStart() {
 	
 	return object;
 }
-
+/**
+ * removes node from end of list and returns the value
+ * @return object
+ */
 public T removeFromEnd() {
 	T object = null;
 	Node1<T>curr= start; 

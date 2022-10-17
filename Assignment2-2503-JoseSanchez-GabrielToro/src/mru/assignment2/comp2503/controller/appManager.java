@@ -9,12 +9,12 @@ public class appManager {
 	Scanner in;
 	TextMessage message;
 	CardDeck deck;
+	WarGame game;
 	
 	public appManager() {
 		
 		in = new Scanner(System.in);
 		message=new TextMessage();
-		deck= new CardDeck();
 		mainMenu();
 	}
 	
@@ -28,7 +28,11 @@ public class appManager {
 			
 			switch (choice) {
 			case 1: 
-				deck.list.print();
+				deck= new CardDeck();
+				deck.generateDeck();
+				deck.shuffleDeck();
+				game= new WarGame(deck);
+				
 				break;
 			
 			case 2:

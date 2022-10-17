@@ -1,8 +1,8 @@
 package mru.assignment2.comp2503.model;
 
-public class LinkedListStack implements StackInterface<Object> {
+public class LinkedListStack<T> implements StackInterface<T> {
 
-	StackNode<Object>start;
+	StackNode<T>start;
 	
 	public LinkedListStack() {
 		start=null;
@@ -10,8 +10,8 @@ public class LinkedListStack implements StackInterface<Object> {
 	
 	
 	@Override
-	public Object pop() {
-		Object object = null;
+	public T pop() {
+		T object = null;
 		if(!isEmpty()) {
 			
 			if(start.getNext()==null) {
@@ -28,8 +28,8 @@ public class LinkedListStack implements StackInterface<Object> {
 	}
 
 	@Override
-	public void push(Object data) {
-		StackNode<Object>nodeToAdd= new StackNode<Object>(data);
+	public void push(T data) {
+		StackNode<T>nodeToAdd= new StackNode<T>(data);
 	
 		if(isEmpty()) {
 			start=nodeToAdd;
@@ -40,13 +40,13 @@ public class LinkedListStack implements StackInterface<Object> {
 	}
 
 	@Override
-	public Object peek() {
-		StackNode<Object>curr= start;
+	public T peek() {
+		StackNode<T>curr= start;
 		while(curr.getNext()!=null) {
 			curr=curr.getNext();
 		}
 		
-		return curr;
+		return curr.getData();
 	}
 
 	@Override
@@ -58,7 +58,7 @@ public class LinkedListStack implements StackInterface<Object> {
 
 	@Override
 	public int size() {
-		StackNode<Object>curr= start;
+		StackNode<T>curr= start;
 		int i;
 		for( i = 0;curr.getNext()!=null; i++ ) {
 			curr=curr.getNext();

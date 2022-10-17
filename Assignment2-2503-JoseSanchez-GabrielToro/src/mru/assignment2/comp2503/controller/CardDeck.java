@@ -15,7 +15,7 @@ public class CardDeck {
 	public CardDeck() {
 		list = new DoublyLinkedListDeck<Card>();
 		 maxCards=52;
-		 generateDeck();
+		 
 	}
 	
 	public void generateDeck() {
