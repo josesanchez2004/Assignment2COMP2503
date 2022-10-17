@@ -24,14 +24,35 @@ public class TextMessage {
 	}
 	
 	public int promptMenuChoice() {
-		System.out.print("Please select your choice:  ");
-		 int choice= sc.nextInt();
+		int choice=0;
+		boolean toggle=false;
+		while(toggle==false) {
+			System.out.print("Please select your choice:  ");
+			if(sc.hasNextInt()) {
+				 choice= sc.nextInt();
+				 toggle=true;
+				if(choice<0 || choice>3) {
+					System.out.println();
+					System.out.println("You have entered a wrong input");
+				}
+			}else {
+				System.out.println();
+				System.out.println("You have entered a wrong input");
+				sc.nextLine();
+				
+			}
+		}
+			
+		
+		 
 		 return choice;
 	}
 	
 	public int howManyCards() {
 		System.out.print("How many cards would you like to deal: ");
 		int cards= sc.nextInt();
+		System.out.println("");
+		
 		return cards;
 	}
 	
@@ -44,8 +65,9 @@ public class TextMessage {
 	
 	public void tieGame() {
 		System.out.println("The game has tied.");
-		System.out.println("GAME OVER");
 		System.out.println(" ");
+		System.out.println("GAME OVER");
+		
 	}
 	public void player1Wins() {
 		System.out.println("Player 1 wins!!!!!!");
@@ -55,8 +77,9 @@ public class TextMessage {
 	
 	public void player2Wins() {
 		System.out.println("Player 2 wins!!!!!!");
-		System.out.println("GAME OVER");
 		System.out.println(" ");
+		System.out.println("GAME OVER");
+		
 	}
 	
 

@@ -53,11 +53,27 @@ private void playGame(CardDeck deck) {
 			message.printPlayerOutput(cardOne, cardTwo);
 			playerTwoCount++;
 		}else {
-			
+				if(calculateRank(cardOne)>calculateRank(cardTwo)) {
+					message.printPlayerOutput(cardOne, cardTwo);
+					playerOneCount++;
+				}else if(calculateRank(cardOne)<calculateRank(cardTwo)){
+					message.printPlayerOutput(cardOne, cardTwo);
+					playerTwoCount++;
+				}else {
+					message.printPlayerOutput(cardOne, cardTwo);
+					playerOneCount++;
+					playerTwoCount++;
+				}
+				
 		}
+				
 		
 		index++;
 	}
+	
+	System.out.println("Player 1 points: "+playerOneCount);
+	System.out.println("Player 2 points: "+playerTwoCount);
+	System.out.println("");
 	
 	if(playerOneCount>playerTwoCount) {
 		message.player1Wins();
@@ -69,6 +85,25 @@ private void playGame(CardDeck deck) {
 	
 	
 
+}
+
+/**
+ * calculates the rank of suits by numerating them with order of highest to lowest, Spade, Heart, Diamond, and Club.
+ * @param c
+ * @return
+ */
+public int calculateRank(Card c) {
+	
+	if(c.getSuit()=="Spade") {
+		return 4;
+	}else if (c.getSuit()=="Heart") {
+		return 3;
+	}else if (c.getSuit()=="Diamond") {
+		return 2;
+	}
+	else {
+		return 1;
+	}
 }
 
 

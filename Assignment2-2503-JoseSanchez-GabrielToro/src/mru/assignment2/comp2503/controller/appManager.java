@@ -47,6 +47,7 @@ public class appManager {
 				break;
 			
 			case 2:
+				deck= new CardDeck();
 				deck.shuffleDeck();
 				message.deckHasBeenShuffled();
 				break;
