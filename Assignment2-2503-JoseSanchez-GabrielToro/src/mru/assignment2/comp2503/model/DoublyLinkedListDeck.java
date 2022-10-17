@@ -1,5 +1,9 @@
 package mru.assignment2.comp2503.model;
 
+/**
+ * This class is the Linked List used to generate the deck of cards. 
+ * @author Jose Sanchez and Gabriel Toro
+ */
 public class DoublyLinkedListDeck<T> {
 
 	private Node1<T>start;
@@ -71,6 +75,7 @@ public void addToEnd(T data) {
 		
 	}
 }
+
 /**
  * removes item from the start of the list and returns the value. 
  * @return object
@@ -92,6 +97,7 @@ public T removeFromStart() {
 	
 	return object;
 }
+
 /**
  * removes node from end of list and returns the value
  * @return object

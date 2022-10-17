@@ -1,5 +1,8 @@
 package mru.assignment2.comp2503.model;
-
+/**
+ * This is the Node class for the DoublyLinkedList. 
+ * @author Jose Sanchez and Gabriel Toro
+ */
 public class Node1<T> {
  
 	private T data;

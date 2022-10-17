@@ -5,6 +5,10 @@ import mru.assignment2.comp2503.model.DoublyLinkedListDeck;
 import mru.assignment2.comp2503.model.LinkedListStack;
 import mru.assignment2.comp2503.view.TextMessage;
 
+/**
+ * This class has the code for the WarGame
+ * @author Jose Sanchez and Gabriel Toro
+ */
 public class WarGame {
 	
 	TextMessage message;

@@ -1,5 +1,9 @@
 package mru.assignment2.comp2503.model;
-
+/**
+ * Card is a class to define a Card
+ * @author Jose Sanchez and Gabriel Toro
+ *
+ */
 public class Card {
 
 	private String suit;

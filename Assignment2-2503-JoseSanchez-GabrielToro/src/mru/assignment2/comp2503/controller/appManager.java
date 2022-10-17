@@ -4,6 +4,11 @@ import java.util.Scanner;
 
 import mru.assignment2.comp2503.view.TextMessage;
 
+/**
+ * this class has the code to run the main menu and call the warGame class and functions for the app. 
+ * @author Jose Sanchez and Gabriel Toro
+ *
+ */
 public class appManager {
 
 	Scanner in;
@@ -11,6 +16,9 @@ public class appManager {
 	CardDeck deck;
 	WarGame game;
 	
+	/**
+	 * This is the constructor for the appManager class. 
+	 */
 	public appManager() {
 		
 		in = new Scanner(System.in);
@@ -18,6 +26,9 @@ public class appManager {
 		mainMenu();
 	}
 	
+	/**
+	 * mainMenu is the method that holds the controller code for the main menu
+	 */
 	private void mainMenu() {
 		boolean toggle = true;
 		int choice=0;

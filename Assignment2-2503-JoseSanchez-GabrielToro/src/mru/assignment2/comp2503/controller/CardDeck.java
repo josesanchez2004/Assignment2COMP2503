@@ -5,6 +5,11 @@ import java.util.Random;
 import mru.assignment2.comp2503.model.Card;
 import mru.assignment2.comp2503.model.DoublyLinkedListDeck;
 
+/**
+ * This class is used to generate a deck of cards using the Card class.
+ * @author Jose Sanchez and Gabriel Toro
+ *
+ */
 public class CardDeck {
 	
 	public DoublyLinkedListDeck<Card> list;
@@ -12,12 +17,18 @@ public class CardDeck {
 	private int maxCards;
 	private int index; 
 	
+	/**
+	 * this is the constructor for the cardDeck class.Initializes a DoublyLinkedListDeck.
+	 */
 	public CardDeck() {
 		list = new DoublyLinkedListDeck<Card>();
 		 maxCards=52;
 		 
 	}
 	
+	/**
+	 * generateDeck generates a deck of cards.
+	 */
 	public void generateDeck() {
 		for(index=1;index<=52;index++) {
 			if(index<=13) {
@@ -36,7 +47,9 @@ public class CardDeck {
 		}
 		
 	}
-	
+	/**
+	 * shuffle deck shuffles the deck of cards. 
+	 */
 	public void shuffleDeck() {
 		for(int i=1;i<=52;i++) {
 			Card c=list.removeFromStart();
