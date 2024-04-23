@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"mru.assignment2.comp2503.application"},{"l":"mru.assignment2.comp2503.controller"},{"l":"mru.assignment2.comp2503.model"},{"l":"mru.assignment2.comp2503.view"},{"l":"tests"}];updateSearchResults();
